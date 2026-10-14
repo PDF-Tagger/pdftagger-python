@@ -9,7 +9,7 @@ which builds the package and uploads it with PyPI trusted publishing (no token).
 
 One-time setup (already done once it has been published):
 
-- On PyPI, add a trusted publisher for the project `pdftagger`: owner `rachel-ackeret`,
+- On PyPI, add a trusted publisher for the project `pdftagger`: owner `PDF-Tagger`,
   repository `pdftagger-python`, workflow `publish.yml`, environment `pypi`. Before the first
   release this is a "pending publisher" (Account settings → Publishing).
 - On GitHub, create the environment `pypi` (Settings → Environments).

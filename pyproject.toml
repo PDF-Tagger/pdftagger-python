@@ -44,8 +44,8 @@ dev = ["pytest>=7", "respx>=0.20", "build>=1.0"]
 [project.urls]
 Homepage = "https://pdf-tagger.com"
 Documentation = "https://pdf-tagger.com/api/reference"
-Source = "https://github.com/rachel-ackeret/pdftagger-python"
-Issues = "https://github.com/rachel-ackeret/pdftagger-python/issues"
+Source = "https://github.com/PDF-Tagger/pdftagger-python"
+Issues = "https://github.com/PDF-Tagger/pdftagger-python/issues"
 
 [tool.hatch.version]
 path = "src/pdftagger/_version.py"
