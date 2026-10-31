@@ -1,4 +1,4 @@
-"""Tag a PDF and save the accessible result.
+"""Tag a PDF, save the accessible result and print its PDF/UA-1 report.
 
 Usage:
     export PDFTAGGER_API_KEY=sk_live_...
@@ -38,6 +38,11 @@ def main() -> int:
 
         client.download_result(job, out)
         print(f"Tagged PDF saved to {out} (job {job.id}, {job.credits_used} credits)")
+
+        report = client.get_job_report(job)
+        print(f"{report.standard}: {report.summary}")
+        for req in report.failed + report.needs_review:
+            print(f"  {req.result}: {req.reference} {req.name}")
     return 0
 
 

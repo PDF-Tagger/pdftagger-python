@@ -3,6 +3,7 @@
 Official Python SDK for the [PDF Tagger](https://pdf-tagger.com) API. Upload a PDF,
 submit a tagging job, and download a **PDF/UA-tagged, accessible** PDF — with correct
 reading order, headings, tables, and alt text. Tag one PDF, or up to 100 at once as a batch.
+Each job comes with a PDF/UA-1 report: the result for every accessibility requirement in PDF/UA-1.
 
 ```bash
 pip install pdftagger
@@ -45,6 +46,31 @@ Don't want to block? Submit and poll yourself:
 job = client.tag_pdf("report.pdf", wait=False)   # returns immediately
 job = client.wait_for_job(job)                    # ...poll later
 ```
+
+## The PDF/UA-1 report
+
+Every completed job has a report: the result and evidence for every accessibility requirement in
+PDF/UA-1, and a report PDF you can keep.
+
+```python
+report = client.get_job_report(job)
+print(report.summary)   # {'handled': 169, 'failed': 0, 'needs_review': 0, 'for_information': 0, 'not_applicable': 51}
+
+for req in report.failed:   # also report.needs_review
+    print(req.reference, req.name, req.evidence)
+
+client.download_report(job, "report.accessibility-report.pdf")
+```
+
+Each `Requirement` has a `result`:
+
+| `result` | Meaning |
+|---|---|
+| `handled` | It passed, or PDF Tagger met or fixed it. |
+| `failed` | A validator found it failing in the file. |
+| `needs_review` | A person must confirm it. |
+| `for_information` | A limit from the source file that you cannot act on. |
+| `not_applicable` | The document has no content of this kind. |
 
 ## Many PDFs at once: batches
 
@@ -116,6 +142,7 @@ client.upload_file(upload, "report.pdf")
 job = client.submit_job(key=upload.key, ocr=True)
 job = client.get_job(job.id)               # processing / completed / failed
 result = client.get_job_result(job.id)     # short-lived download URL
+report = client.get_job_report(job.id)     # the PDF/UA-1 report
 ```
 
 ## Errors
@@ -127,8 +154,8 @@ All errors derive from `PdfTaggerError`.
 | `AuthenticationError` | 401 — key missing, invalid, or revoked |
 | `BadRequestError` | 400 — invalid request (for a batch, `.errors` lists each bad file) |
 | `InsufficientCreditsError` | 402 — not enough credits (a batch charges nothing) |
-| `NotFoundError` | 404 — no such job/resource for this account |
-| `ConflictError` | 409 — idempotency conflict, or result not ready |
+| `NotFoundError` | 404 — no such job/resource for this account, or the job has no report |
+| `ConflictError` | 409 — idempotency conflict, or result or report not ready |
 | `RateLimitError` | 429 — rate limited (`.retry_after` seconds) |
 | `JobFailed` | the job finished with a `failed` status (credits are refunded) |
 | `JobTimeout` | the job, or the batch, did not finish within the poll timeout |
