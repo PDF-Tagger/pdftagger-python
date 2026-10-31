@@ -126,6 +126,88 @@ class JobResult:
 
 
 @dataclass
+class Requirement:
+    """One accessibility requirement in a job's PDF/UA-1 report, with its result on this document.
+
+    ``result`` is one of ``handled`` (passed, or PDF Tagger met or fixed it), ``failed`` (a validator
+    found it failing in the file), ``needs_review`` (a person must confirm it), ``for_information`` (a
+    limit from the source file you cannot act on) or ``not_applicable`` (the document has no content of
+    this kind). ``evidence`` is the sentence behind the result, or ``None`` for a plain pass.
+    """
+
+    id: str
+    reference: str
+    name: str
+    result: str
+    level: Optional[str] = None
+    section_id: Optional[str] = None
+    section_title: Optional[str] = None
+    category: Optional[str] = None
+    evidence: Optional[str] = None
+    raw: Dict[str, Any] = field(default_factory=dict, repr=False)
+
+    @classmethod
+    def from_dict(cls, data: Mapping[str, Any]) -> "Requirement":
+        section = data.get("section") or {}
+        return cls(
+            id=data["id"],
+            reference=data.get("reference", ""),
+            name=data.get("name", ""),
+            result=data["result"],
+            level=data.get("level"),
+            section_id=section.get("id"),
+            section_title=section.get("title"),
+            category=data.get("category"),
+            evidence=data.get("evidence"),
+            raw=dict(data),
+        )
+
+
+@dataclass
+class JobReport:
+    """A job's PDF/UA-1 report (``GET /v1/jobs/{id}/report``).
+
+    ``requirements`` lists every accessibility requirement in PDF/UA-1, in the standard's order.
+    ``summary`` counts the requirements by result. ``report_pdf_url`` is a short-lived link to the
+    report PDF, or ``None`` when the file is no longer stored.
+    """
+
+    job_id: str
+    standard: str
+    total_requirements: int
+    summary: Dict[str, int]
+    requirements: List[Requirement]
+    report_pdf_url: Optional[str] = None
+    expires_in: Optional[int] = None
+    request_id: Optional[str] = None
+    raw: Dict[str, Any] = field(default_factory=dict, repr=False)
+
+    @classmethod
+    def from_dict(cls, data: Mapping[str, Any]) -> "JobReport":
+        return cls(
+            job_id=data["job_id"],
+            standard=data.get("standard", ""),
+            total_requirements=int(data.get("total_requirements", 0)),
+            summary=dict(data.get("summary") or {}),
+            requirements=[Requirement.from_dict(r) for r in data.get("requirements") or []],
+            report_pdf_url=data.get("report_pdf_url"),
+            expires_in=data.get("expires_in"),
+            request_id=data.get("request_id"),
+            raw=dict(data),
+        )
+
+    @property
+    def failed(self) -> List[Requirement]:
+        """The requirements a validator found failing in the file."""
+        return [r for r in self.requirements if r.result == "failed"]
+
+    @property
+    def needs_review(self) -> List[Requirement]:
+        """The requirements a person must confirm."""
+        return [r for r in self.requirements if r.result == "needs_review"]
+
+
+@dataclass
 class BatchItem:
     """One file in a batch for :meth:`~pdftagger.client.PdfTaggerClient.submit_batch`.
 

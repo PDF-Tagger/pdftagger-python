@@ -1,0 +1,2877 @@
+{
+ "job_id": "job_1",
+ "standard": "PDF/UA-1 (ISO 14289-1:2014)",
+ "total_requirements": 220,
+ "summary": {
+  "handled": 169,
+  "failed": 0,
+  "needs_review": 0,
+  "for_information": 0,
+  "not_applicable": 51
+ },
+ "requirements": [
+  {
+   "id": "L1-5-1",
+   "reference": "ISO 14289-1 §5",
+   "name": "The XMP metadata includes the PDF/UA identifier.",
+   "level": "shall",
+   "section": {
+    "id": "5",
+    "title": "Version identification"
+   },
+   "category": "Document setup & metadata",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-5-2",
+   "reference": "ISO 14289-1 §5",
+   "name": "The PDF/UA identifier uses the pdfuaid schema prefix.",
+   "level": "shall",
+   "section": {
+    "id": "5",
+    "title": "Version identification"
+   },
+   "category": "Document setup & metadata",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-5-3",
+   "reference": "ISO 14289-1 §5",
+   "name": "The PDF/UA identifier names part 1 of the standard.",
+   "level": "shall",
+   "section": {
+    "id": "5",
+    "title": "Version identification"
+   },
+   "category": "Document setup & metadata",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-5-4",
+   "reference": "ISO 14289-1 §5",
+   "name": "The PDF/UA identifier names the amendment when the file follows one.",
+   "level": "shall",
+   "section": {
+    "id": "5",
+    "title": "Version identification"
+   },
+   "category": "Document setup & metadata",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L1-6.2-1",
+   "reference": "ISO 14289-1 §6.2",
+   "name": "The file structure, content streams and tags follow the PDF format (ISO 32000-1).",
+   "level": "shall",
+   "section": {
+    "id": "6",
+    "title": "Conformance requirements"
+   },
+   "category": "Document setup & metadata",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-6.2-2",
+   "reference": "ISO 14289-1 §6.2",
+   "name": "The file uses no feature from PDF versions before ISO 32000-1 that the format no longer defines.",
+   "level": "should",
+   "section": {
+    "id": "6",
+    "title": "Conformance requirements"
+   },
+   "category": "Document setup & metadata",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-6.2-3",
+   "reference": "ISO 14289-1 §6.2",
+   "name": "The file identifies itself as PDF/UA.",
+   "level": "shall",
+   "section": {
+    "id": "6",
+    "title": "Conformance requirements"
+   },
+   "category": "Document setup & metadata",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.1-1a",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Every piece of content is either tagged or marked as an artifact.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L1-7.1-1b",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Artifacts are marked as artifacts and stay out of the tag tree.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L1-7.1-2a",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Each tag's type fits the meaning of its content.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L1-7.1-2b",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Tags are in logical reading order.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We derive the reading order and choose a tag for every block from the page as rendered."
+  },
+  {
+   "id": "L1-7.1-2c",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Content that never shows on the page is marked as an artifact.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L1-7.1-3a",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Every non-standard tag maps to the closest standard type.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Any non-standard tag we emit is mapped to a standard one, so assistive technology understands it."
+  },
+  {
+   "id": "L1-7.1-3b",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Every role mapping ends at a standard type.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.1-4",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "No standard type is remapped.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.1-5",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Nothing flickers or flashes.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no scripts that could flash."
+  },
+  {
+   "id": "L1-7.1-6",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "All meaning conveyed by colour, contrast, format or layout is also in the tagged text.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We check whether meaning is carried by colour alone, and flag it to you when it is."
+  },
+  {
+   "id": "L1-7.1-7",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "Audio content is also available in another form.",
+   "level": "should",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no audio or media."
+  },
+  {
+   "id": "L1-7.1-8a",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "The XMP metadata includes a dc:title.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.1-8b",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "The dc:title clearly identifies the document.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We set the document title and language, and declare PDF/UA conformance metadata."
+  },
+  {
+   "id": "L1-7.1-9",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "The viewer shows the document title (DisplayDocTitle is true).",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.1-10a",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "OCR-generated text is free of significant errors.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document was not processed with OCR, so it has no OCR-generated text."
+  },
+  {
+   "id": "L1-7.1-10b",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "OCR-generated text is tagged.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document was not processed with OCR, so it has no OCR-generated text."
+  },
+  {
+   "id": "L1-7.1-11",
+   "reference": "ISO 14289-1 §7.1",
+   "name": "The Suspects entry is false.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-1",
+   "reference": "ISO 32000-1 §14.6.1",
+   "name": "Each marked-content sequence that starts with a property list ends with a matching end operator.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-2",
+   "reference": "ISO 32000-1 §14.6.1",
+   "name": "Marked-content operators sit only between graphics objects.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-3",
+   "reference": "ISO 32000-1 §14.6.1",
+   "name": "Each marked-content sequence stays within one content stream.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-4",
+   "reference": "ISO 32000-1 §14.6.1",
+   "name": "Marked-content sequences and text objects nest correctly and do not overlap.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-5",
+   "reference": "ISO 32000-1 §14.6.1",
+   "name": "Each marked-content property operator carries a property list.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-6",
+   "reference": "ISO 32000-1 §14.6.2",
+   "name": "A property list that points outside the content stream is a named resource.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-7",
+   "reference": "ISO 32000-1 §14.6.3",
+   "name": "No save or restore of the graphics state occurs inside a marked clipping sequence.",
+   "level": "may not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.6-8",
+   "reference": "ISO 32000-1 §14.6.1",
+   "name": "Each marked-content tag is a name; each property list is inline or a named resource.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.1-1",
+   "reference": "ISO 32000-1 §14.7.1",
+   "name": "The document declares itself tagged (Marked is true).",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.2-1",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "The document has a structure tree root.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L2-14.7.2-2",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "The structure tree root has the type StructTreeRoot.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.2-3",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "The structure tree root's children are structure elements.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.2-4",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "An ID tree lists every structure element that has an ID.",
+   "level": "required",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.2-5",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "A parent tree is present when tags hold content.",
+   "level": "required",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.2-6",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "The next parent-tree key is greater than every key in use.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.2-7",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "Every structure element has the type StructElem when its type is given.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.2-8",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "Every structure type name follows the naming rules.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.2-9",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "Every structure element points to its parent.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.2-10",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "Every element ID is unique.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.2-11",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "Every structure element's page reference points to a page.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.2-12",
+   "reference": "ISO 32000-1 §14.7.2",
+   "name": "Every attribute object is a dictionary or a stream.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.3-1",
+   "reference": "ISO 32000-1 §14.7.3",
+   "name": "Every structure element has a structure type.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.4-1",
+   "reference": "ISO 32000-1 §14.7.4.1",
+   "name": "Content items are the leaves of the tag tree and do not nest inside each other.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-2",
+   "reference": "ISO 32000-1 §14.7.4.1",
+   "name": "A tagged content item does not draw another tagged content item.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-3",
+   "reference": "ISO 32000-1 §14.7.4.2",
+   "name": "Each tagged marked-content sequence has an ID that is unique in its content stream.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-4",
+   "reference": "ISO 32000-1 §14.7.4.2",
+   "name": "Each reference to marked content can find its page.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.4-5",
+   "reference": "ISO 32000-1 §14.7.4.2",
+   "name": "A reference to marked content names its stream only when it is not the page's own stream.",
+   "level": "should",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.4-6",
+   "reference": "ISO 32000-1 §14.7.4.2",
+   "name": "A form drawn inside a tagged sequence holds no tagged content of its own.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-7",
+   "reference": "ISO 32000-1 §14.7.4.2",
+   "name": "A form drawn more than once is tagged only by wrapping each drawing.",
+   "level": "may only",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-8",
+   "reference": "ISO 32000-1 §14.7.4.3",
+   "name": "Each object reference has the type OBJR and can find its page.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.4-9",
+   "reference": "ISO 32000-1 §14.7.4.4",
+   "name": "The parent tree has an entry for every tagged object and every content stream with tagged content.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-10",
+   "reference": "ISO 32000-1 §14.7.4.4",
+   "name": "Every tagged object and content stream has a parent-tree key.",
+   "level": "required",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-11",
+   "reference": "ISO 32000-1 §14.7.4.4",
+   "name": "No object has both kinds of parent-tree key.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-12",
+   "reference": "ISO 32000-1 §14.7.4.2",
+   "name": "Each marked-content tag matches the type of its structure element.",
+   "level": "should",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.7.4-13",
+   "reference": "ISO 32000-1 §14.7.4.2",
+   "name": "Each marked-content reference has the type MCR and the entries it needs.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.5-1",
+   "reference": "ISO 32000-1 §14.7.5.1",
+   "name": "Every attribute object names its owner.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.7.5-2",
+   "reference": "ISO 32000-1 §14.7.5.1",
+   "name": "A structure element's attributes are one attribute object or an array of them.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.1-1",
+   "reference": "ISO 32000-1 §14.8.1",
+   "name": "All text can be converted to Unicode.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We preserve character-to-Unicode mapping so text can be read aloud and searched."
+  },
+  {
+   "id": "L2-14.8.1-2",
+   "reference": "ISO 32000-1 §14.8.1",
+   "name": "Word breaks are present in the text.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.1-3",
+   "reference": "ISO 32000-1 §14.8.1",
+   "name": "Content order on the page follows how the content appears.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We derive the reading order and choose a tag for every block from the page as rendered."
+  },
+  {
+   "id": "L2-14.8.2.2-1",
+   "reference": "ISO 32000-1 §14.8.2.2.2",
+   "name": "Every artifact is marked as an artifact.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L2-14.8.2.3-1",
+   "reference": "ISO 32000-1 §14.8.2.3.1",
+   "name": "Artifacts are in the page content order but not in the reading order.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L2-14.8.2.3-2",
+   "reference": "ISO 32000-1 §14.8.2.3.1",
+   "name": "Suspect content is not used.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L2-14.8.2.3-3",
+   "reference": "ISO 32000-1 §14.8.2.3.2",
+   "name": "Annotations take their reading position from the tag tree.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag annotations, wire links to their text, and give each one an accessible description."
+  },
+  {
+   "id": "L2-14.8.2.3-4",
+   "reference": "ISO 32000-1 §14.8.2.3.3",
+   "name": "Right-to-left text reads in the right order.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.2.5-1",
+   "reference": "ISO 32000-1 §14.8.2.5",
+   "name": "Words are separated by spaces in the text.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.4.1-1",
+   "reference": "ISO 32000-1 §14.8.4.1",
+   "name": "Every structure type is standard or maps to a standard type.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.4.2-1",
+   "reference": "ISO 32000-1 §14.8.4.2",
+   "name": "Grouping elements only group other elements.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We derive the reading order and choose a tag for every block from the page as rendered."
+  },
+  {
+   "id": "L2-14.8.4.2-2",
+   "reference": "ISO 32000-1 §14.8.4.2",
+   "name": "The tag tree has one top-level element.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.4.2-3",
+   "reference": "ISO 32000-1 §14.8.4.2",
+   "name": "Table-of-contents items hold only the allowed kinds of children.",
+   "level": "may be",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.4.2-4",
+   "reference": "ISO 32000-1 §14.8.4.2",
+   "name": "The top-level element is a Document when the file is a whole document.",
+   "level": "should",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.4.2-5",
+   "reference": "ISO 32000-1 §14.8.4.2",
+   "name": "Index entries point to where their text occurs.",
+   "level": "table",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We derive the reading order and choose a tag for every block from the page as rendered."
+  },
+  {
+   "id": "L2-14.8.4.3-1",
+   "reference": "ISO 32000-1 §14.8.4.3.1",
+   "name": "Table rows, cells and sections group content only inside a table.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.4.5-1",
+   "reference": "ISO 32000-1 §14.8.4.5",
+   "name": "Each figure, formula or form holds whole graphics objects.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.4.5-2",
+   "reference": "ISO 32000-1 §14.8.4.5",
+   "name": "No figure, formula or form starts inside a text object.",
+   "level": "shall not",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.4.5-3",
+   "reference": "ISO 32000-1 §14.8.4.5",
+   "name": "A figure clips its content only with a tagged clipping sequence.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.4.5-4",
+   "reference": "ISO 32000-1 §14.8.4.5",
+   "name": "A form tag holds one widget annotation when it has no Role.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.4.5-5",
+   "reference": "ISO 32000-1 §14.8.4.5",
+   "name": "A form field's appearance shows the form element.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.4.5-6",
+   "reference": "ISO 32000-1 §14.8.4.5",
+   "name": "Each figure, formula, form and table records where it sits on the page (BBox).",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L2-14.8.4.5-7",
+   "reference": "ISO 32000-1 §14.8.4.5",
+   "name": "An illustration attached to text is tagged as a Figure.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L2-14.8.5-1",
+   "reference": "ISO 32000-1 §14.8.5.1",
+   "name": "Attributes sit in attribute objects attached to their element.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.5.4-1",
+   "reference": "ISO 32000-1 §14.8.5.4.1",
+   "name": "Layout attributes belong to the Layout owner.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.5.4-2",
+   "reference": "ISO 32000-1 §14.8.5.4.3",
+   "name": "A figure or table on one page has a bounding box around all its visible content.",
+   "level": "required",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L2-14.8.5.4-3",
+   "reference": "ISO 32000-1 §14.8.5.4.3",
+   "name": "The width attribute is used only on the element types that allow it.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L2-14.8.5.4-4",
+   "reference": "ISO 32000-1 §14.8.5.4.6",
+   "name": "A figure placed as a block has a height; one placed inline has a width.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L2-14.8.5.4-5",
+   "reference": "ISO 32000-1 §14.8.5.4.7",
+   "name": "Content set in columns records its column layout.",
+   "level": "shall",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.5.4-6",
+   "reference": "ISO 32000-1 §14.8.5.4.3",
+   "name": "Table cells record their width.",
+   "level": "should",
+   "section": {
+    "id": "7.1",
+    "title": "General"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.2-1a",
+   "reference": "ISO 14289-1 §7.2",
+   "name": "Content is tagged in logical reading order.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "We derive the reading order and choose a tag for every block from the page as rendered."
+  },
+  {
+   "id": "L1-7.2-1b",
+   "reference": "ISO 14289-1 §7.2",
+   "name": "Each element uses the tag that fits its meaning best.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "We derive the reading order and choose a tag for every block from the page as rendered."
+  },
+  {
+   "id": "L1-7.2-2a",
+   "reference": "ISO 14289-1 §7.2",
+   "name": "Every character maps to Unicode.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "We preserve character-to-Unicode mapping so text can be read aloud and searched."
+  },
+  {
+   "id": "L1-7.2-3a",
+   "reference": "ISO 14289-1 §7.2",
+   "name": "The language of the document is set.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.2-3b",
+   "reference": "ISO 14289-1 §7.2",
+   "name": "Each change of language in the text is declared.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "Document language declared: en-US"
+  },
+  {
+   "id": "L1-7.2-3c",
+   "reference": "ISO 14289-1 §7.2",
+   "name": "The language of Alt, ActualText and E text is set when it differs.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "Document language declared: en-US"
+  },
+  {
+   "id": "L1-7.2-4",
+   "reference": "ISO 14289-1 §7.2",
+   "name": "Stretched characters such as long brackets have replacement text.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "not_applicable",
+   "evidence": "This document has no stretchable (math) characters."
+  },
+  {
+   "id": "L2-14.8.2.4-1",
+   "reference": "ISO 32000-1 §14.8.2.4.2",
+   "name": "The file holds what is needed to map every character to Unicode.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "We preserve character-to-Unicode mapping so text can be read aloud and searched."
+  },
+  {
+   "id": "L2-14.9.2-1",
+   "reference": "ISO 32000-1 §14.9.2.2",
+   "name": "Each language identifier is empty or a valid language tag.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.9.2-2",
+   "reference": "ISO 32000-1 §14.9.2.3",
+   "name": "The document catalogue sets the default language.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L2-14.9.2-3",
+   "reference": "ISO 32000-1 §14.9.2.4",
+   "name": "A multi-language text array lists each language once.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L2-14.9.4-1",
+   "reference": "ISO 32000-1 §14.9.4",
+   "name": "Replacement text (ActualText) gives the words a person sees.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L2-14.9.4-2",
+   "reference": "ISO 32000-1 §14.9.4",
+   "name": "Neighbouring replacement texts join without an extra word break.",
+   "level": "shall",
+   "section": {
+    "id": "7.2",
+    "title": "Text"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L1-7.3-1a",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "Graphics are tagged as <Figure>.",
+   "level": "shall",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L1-7.3-1b",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "A graphic with no meaning is marked as an artifact.",
+   "level": "shall",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L1-7.3-1c",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "Links with a meaningful background describe both the link and the graphic.",
+   "level": "shall",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L1-7.3-2",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "Captions are tagged as <Caption>.",
+   "level": "shall",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L1-7.3-3",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "Every <Figure> has alternative text.",
+   "level": "shall",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.3-4",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "A graphic that shows text not meant to be read has alt text that says what it is for.",
+   "level": "shall",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L1-7.3-5",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "Grouped graphics are tagged together as a group.",
+   "level": "shall",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L1-7.3-6",
+   "reference": "ISO 14289-1 §7.3",
+   "name": "The most accessible representation is used.",
+   "level": "should",
+   "section": {
+    "id": "7.3",
+    "title": "Graphics"
+   },
+   "category": "Images & graphics",
+   "result": "handled",
+   "evidence": "1 of 1 figure carries a description"
+  },
+  {
+   "id": "L1-7.4.1-1",
+   "reference": "ISO 14289-1 §7.4",
+   "name": "Headings are tagged.",
+   "level": "shall",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "handled",
+   "evidence": "6 headings structured"
+  },
+  {
+   "id": "L1-7.4.1-2",
+   "reference": "ISO 14289-1 §7.4",
+   "name": "Section titles are recorded on the sections.",
+   "level": "should",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L1-7.4.2-1",
+   "reference": "ISO 14289-1 §7.4.2",
+   "name": "Numbered headings start at <H1>.",
+   "level": "shall",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.4.2-2",
+   "reference": "ISO 14289-1 §7.4.2",
+   "name": "Heading levels descend in order, without skipping a level.",
+   "level": "shall",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "handled",
+   "evidence": "6 headings structured"
+  },
+  {
+   "id": "L1-7.4.3-1",
+   "reference": "ISO 14289-1 §7.4.3",
+   "name": "Headings deeper than <H6> follow the same rules as <H1> to <H6>.",
+   "level": "shall",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "handled",
+   "evidence": "6 headings structured"
+  },
+  {
+   "id": "L1-7.4.3-2",
+   "reference": "ISO 14289-1 §7.4.3",
+   "name": "Headings deeper than <H6> are named H7, H8 and so on.",
+   "level": "shall",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "handled",
+   "evidence": "6 headings structured"
+  },
+  {
+   "id": "L1-7.4.4-1",
+   "reference": "ISO 14289-1 §7.4.4",
+   "name": "Strongly structured documents use the generic <H> heading.",
+   "level": "should",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L1-7.4.4-2",
+   "reference": "ISO 14289-1 §7.4.4",
+   "name": "Each node contains at most one <H> tag.",
+   "level": "shall",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.4.4-3",
+   "reference": "ISO 14289-1 §7.4.4",
+   "name": "The document uses one heading convention: <H> or <H#>.",
+   "level": "shall",
+   "section": {
+    "id": "7.4",
+    "title": "Headings"
+   },
+   "category": "Headings & navigation",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.5-1a",
+   "reference": "ISO 14289-1 §7.5",
+   "name": "Tables have header cells.",
+   "level": "should",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": "1 table, 8 header cells identified"
+  },
+  {
+   "id": "L1-7.5-1b",
+   "reference": "ISO 14289-1 §7.5",
+   "name": "Header cells are tagged as headers.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": "1 table, 8 header cells identified"
+  },
+  {
+   "id": "L1-7.5-2a",
+   "reference": "ISO 14289-1 §7.5",
+   "name": "Header cells declare their scope.",
+   "level": "should",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.5-2b",
+   "reference": "ISO 14289-1 §7.5",
+   "name": "When the header links do not show a table's structure, every header cell declares its scope.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": "1 table, 8 header cells identified"
+  },
+  {
+   "id": "L1-7.5-3",
+   "reference": "ISO 14289-1 §7.5",
+   "name": "Only real row-and-column data is tagged as a table.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": "1 table, 8 header cells identified"
+  },
+  {
+   "id": "L2-14.8.4.3-2",
+   "reference": "ISO 32000-1 §14.8.4.3.4",
+   "name": "Tables use the standard table structure types.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.5.7-1",
+   "reference": "ISO 32000-1 §14.8.5.7",
+   "name": "Table attributes belong to the Table owner.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.5.7-2",
+   "reference": "ISO 32000-1 §14.8.5.7",
+   "name": "Only table cells say how many rows or columns they span.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.5.7-3",
+   "reference": "ISO 32000-1 §14.8.5.7",
+   "name": "Each cell's header links point to header cells.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": "1 table, 8 header cells identified"
+  },
+  {
+   "id": "L2-14.8.5.7-4",
+   "reference": "ISO 32000-1 §14.8.5.7",
+   "name": "A header's scope is Row, Column or Both, and only header cells have one.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.8.5.7-5",
+   "reference": "ISO 32000-1 §14.8.5.7",
+   "name": "Only tables carry a table summary.",
+   "level": "shall",
+   "section": {
+    "id": "7.5",
+    "title": "Tables"
+   },
+   "category": "Tables",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L1-7.6-1a",
+   "reference": "ISO 14289-1 §7.6",
+   "name": "Lists use the standard list structure types.",
+   "level": "shall",
+   "section": {
+    "id": "7.6",
+    "title": "Lists"
+   },
+   "category": "Lists",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.6-1b",
+   "reference": "ISO 14289-1 §7.6",
+   "name": "Each list item is tagged as an item.",
+   "level": "shall",
+   "section": {
+    "id": "7.6",
+    "title": "Lists"
+   },
+   "category": "Lists",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.6-1c",
+   "reference": "ISO 14289-1 §7.6",
+   "name": "Ordered lists carry a ListNumbering value.",
+   "level": "shall",
+   "section": {
+    "id": "7.6",
+    "title": "Lists"
+   },
+   "category": "Lists",
+   "result": "handled",
+   "evidence": "6 list items structured"
+  },
+  {
+   "id": "L1-7.6-2",
+   "reference": "ISO 14289-1 §7.6",
+   "name": "Lists are tagged as lists only when the content is a list.",
+   "level": "shall",
+   "section": {
+    "id": "7.6",
+    "title": "Lists"
+   },
+   "category": "Lists",
+   "result": "handled",
+   "evidence": "6 list items structured"
+  },
+  {
+   "id": "L2-14.8.5.5-1",
+   "reference": "ISO 32000-1 §14.8.5.5",
+   "name": "Only lists carry a ListNumbering value.",
+   "level": "shall",
+   "section": {
+    "id": "7.6",
+    "title": "Lists"
+   },
+   "category": "Lists",
+   "result": "handled",
+   "evidence": "6 list items structured"
+  },
+  {
+   "id": "L2-14.8.5.5-2",
+   "reference": "ISO 32000-1 §14.8.5.5",
+   "name": "Ordered lists use a standard ListNumbering value.",
+   "level": "shall",
+   "section": {
+    "id": "7.6",
+    "title": "Lists"
+   },
+   "category": "Lists",
+   "result": "handled",
+   "evidence": "6 list items structured"
+  },
+  {
+   "id": "L1-7.7-1a",
+   "reference": "ISO 14289-1 §7.7",
+   "name": "Mathematical expressions are tagged as <Formula>.",
+   "level": "shall",
+   "section": {
+    "id": "7.7",
+    "title": "Mathematical expressions"
+   },
+   "category": "Images & graphics",
+   "result": "not_applicable",
+   "evidence": "This document has no mathematical expressions."
+  },
+  {
+   "id": "L1-7.7-1b",
+   "reference": "ISO 14289-1 §7.7",
+   "name": "Every <Formula> has an Alt attribute.",
+   "level": "shall",
+   "section": {
+    "id": "7.7",
+    "title": "Mathematical expressions"
+   },
+   "category": "Images & graphics",
+   "result": "not_applicable",
+   "evidence": "This document has no mathematical expressions."
+  },
+  {
+   "id": "L1-7.7-2",
+   "reference": "ISO 14289-1 §7.7",
+   "name": "Formula characters meet the Unicode mapping requirements.",
+   "level": "shall",
+   "section": {
+    "id": "7.7",
+    "title": "Mathematical expressions"
+   },
+   "category": "Images & graphics",
+   "result": "not_applicable",
+   "evidence": "This document has no mathematical expressions."
+  },
+  {
+   "id": "L1-7.8-1a",
+   "reference": "ISO 14289-1 §7.8",
+   "name": "Headers and footers are marked as pagination artifacts.",
+   "level": "shall",
+   "section": {
+    "id": "7.8",
+    "title": "Page headers and footers"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We mark running headers and footers as pagination artifacts so they aren't read on every page."
+  },
+  {
+   "id": "L1-7.8-1b",
+   "reference": "ISO 14289-1 §7.8",
+   "name": "Header and footer artifacts use the Header or Footer subtype.",
+   "level": "shall",
+   "section": {
+    "id": "7.8",
+    "title": "Page headers and footers"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We mark running headers and footers as pagination artifacts so they aren't read on every page."
+  },
+  {
+   "id": "L2-14.8.2.2-2",
+   "reference": "ISO 32000-1 §14.8.2.2.2",
+   "name": "Each artifact type is Pagination, Layout, Page or Background.",
+   "level": "shall",
+   "section": {
+    "id": "7.8",
+    "title": "Page headers and footers"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.2.2-3",
+   "reference": "ISO 32000-1 §14.8.2.2.2",
+   "name": "A background artifact has a bounding box.",
+   "level": "required",
+   "section": {
+    "id": "7.8",
+    "title": "Page headers and footers"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L2-14.8.2.2-4",
+   "reference": "ISO 32000-1 §14.8.2.2.2",
+   "name": "An artifact attached to page edges uses the crop box; a background one covers the full page.",
+   "level": "shall",
+   "section": {
+    "id": "7.8",
+    "title": "Page headers and footers"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "PDF Tagger does not write this, so it does not apply to this document."
+  },
+  {
+   "id": "L2-14.8.2.2-5",
+   "reference": "ISO 32000-1 §14.8.2.2.2",
+   "name": "Only pagination artifacts have a subtype.",
+   "level": "should",
+   "section": {
+    "id": "7.8",
+    "title": "Page headers and footers"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": "We mark running headers and footers as pagination artifacts so they aren't read on every page."
+  },
+  {
+   "id": "L1-7.9-1a",
+   "reference": "ISO 14289-1 §7.9",
+   "name": "Notes and references are tagged.",
+   "level": "shall",
+   "section": {
+    "id": "7.9",
+    "title": "Notes and references"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no notes or references."
+  },
+  {
+   "id": "L1-7.9-1b",
+   "reference": "ISO 14289-1 §7.9",
+   "name": "Footnotes and endnotes are tagged as <Note>.",
+   "level": "shall",
+   "section": {
+    "id": "7.9",
+    "title": "Notes and references"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no notes or references."
+  },
+  {
+   "id": "L1-7.9-2",
+   "reference": "ISO 14289-1 §7.9",
+   "name": "Every <Note> has a unique ID.",
+   "level": "shall",
+   "section": {
+    "id": "7.9",
+    "title": "Notes and references"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no notes or references."
+  },
+  {
+   "id": "L2-14.8.4.4-1",
+   "reference": "ISO 32000-1 §14.8.4.4.1",
+   "name": "Annotations other than links and form fields sit in an <Annot> element.",
+   "level": "shall",
+   "section": {
+    "id": "7.9",
+    "title": "Notes and references"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no annotations of the kinds this covers."
+  },
+  {
+   "id": "L2-14.8.4.4-6",
+   "reference": "ISO 32000-1 §14.8.4.4.4",
+   "name": "Ruby text follows the standard ruby structure.",
+   "level": "shall",
+   "section": {
+    "id": "7.9",
+    "title": "Notes and references"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no ruby (phonetic reading) text."
+  },
+  {
+   "id": "L2-14.8.4.4-7",
+   "reference": "ISO 32000-1 §14.8.4.4.4",
+   "name": "Warichu text follows the standard warichu structure.",
+   "level": "may",
+   "section": {
+    "id": "7.9",
+    "title": "Notes and references"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no warichu (inline note) text."
+  },
+  {
+   "id": "L1-7.10-1",
+   "reference": "ISO 14289-1 §7.10",
+   "name": "Each optional-content configuration has a name.",
+   "level": "shall",
+   "section": {
+    "id": "7.10",
+    "title": "Optional content"
+   },
+   "category": "Document setup & metadata",
+   "result": "not_applicable",
+   "evidence": "This document has no optional content."
+  },
+  {
+   "id": "L1-7.10-2",
+   "reference": "ISO 14289-1 §7.10",
+   "name": "No optional-content configuration uses an AS entry.",
+   "level": "shall not",
+   "section": {
+    "id": "7.10",
+    "title": "Optional content"
+   },
+   "category": "Document setup & metadata",
+   "result": "not_applicable",
+   "evidence": "This document has no optional content."
+  },
+  {
+   "id": "L1-7.11-1a",
+   "reference": "ISO 14289-1 §7.11",
+   "name": "Each embedded file is accessible in its own right.",
+   "level": "should",
+   "section": {
+    "id": "7.11",
+    "title": "Embedded files"
+   },
+   "category": "Document setup & metadata",
+   "result": "not_applicable",
+   "evidence": "No content of this kind in this document."
+  },
+  {
+   "id": "L1-7.11-1b",
+   "reference": "ISO 14289-1 §7.11",
+   "name": "Every embedded file has F and UF file-name entries.",
+   "level": "shall",
+   "section": {
+    "id": "7.11",
+    "title": "Embedded files"
+   },
+   "category": "Document setup & metadata",
+   "result": "not_applicable",
+   "evidence": "This document has no embedded files."
+  },
+  {
+   "id": "L1-7.11-1c",
+   "reference": "ISO 14289-1 §7.11",
+   "name": "Every embedded file has a description.",
+   "level": "should",
+   "section": {
+    "id": "7.11",
+    "title": "Embedded files"
+   },
+   "category": "Document setup & metadata",
+   "result": "not_applicable",
+   "evidence": "No content of this kind in this document."
+  },
+  {
+   "id": "L1-7.12-1",
+   "reference": "ISO 14289-1 §7.12",
+   "name": "Article threads follow the logical reading order.",
+   "level": "shall",
+   "section": {
+    "id": "7.12",
+    "title": "Article threads"
+   },
+   "category": "Reading order & structure",
+   "result": "not_applicable",
+   "evidence": "This document has no article threads."
+  },
+  {
+   "id": "L1-7.13-1",
+   "reference": "ISO 14289-1 §7.13",
+   "name": "A signature's appearance meets the same rules as other page content.",
+   "level": "shall",
+   "section": {
+    "id": "7.13",
+    "title": "Digital signatures"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document has no digital signatures."
+  },
+  {
+   "id": "L1-7.13-2",
+   "reference": "ISO 14289-1 §7.13",
+   "name": "A signature graphic has alternative text.",
+   "level": "shall",
+   "section": {
+    "id": "7.13",
+    "title": "Digital signatures"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document has no digital signatures."
+  },
+  {
+   "id": "L1-7.14-1",
+   "reference": "ISO 14289-1 §7.14",
+   "name": "Non-interactive forms carry the PrintField attributes.",
+   "level": "shall",
+   "section": {
+    "id": "7.14",
+    "title": "Non-interactive forms"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document has no form fields."
+  },
+  {
+   "id": "L2-14.8.5.6-1",
+   "reference": "ISO 32000-1 §14.8.5.6",
+   "name": "Each printed form field's role is one of the standard roles.",
+   "level": "shall",
+   "section": {
+    "id": "7.14",
+    "title": "Non-interactive forms"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document has no form fields."
+  },
+  {
+   "id": "L2-14.8.5.6-2",
+   "reference": "ISO 32000-1 §14.8.5.6",
+   "name": "A form field converted to text holds its value as content.",
+   "level": "shall",
+   "section": {
+    "id": "7.14",
+    "title": "Non-interactive forms"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document has no form fields."
+  },
+  {
+   "id": "L2-14.8.5.6-3",
+   "reference": "ISO 32000-1 §14.8.5.6",
+   "name": "A printed checkbox or radio button's state is on, off or neutral.",
+   "level": "shall",
+   "section": {
+    "id": "7.14",
+    "title": "Non-interactive forms"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document has no form fields."
+  },
+  {
+   "id": "L2-14.8.5.6-4",
+   "reference": "ISO 32000-1 §14.8.5.6",
+   "name": "A printed form field's description is its alternate name.",
+   "level": "table",
+   "section": {
+    "id": "7.14",
+    "title": "Non-interactive forms"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document has no form fields."
+  },
+  {
+   "id": "L1-7.15-1",
+   "reference": "ISO 14289-1 §7.15",
+   "name": "The form renders statically, without dynamic XFA.",
+   "level": "shall not",
+   "section": {
+    "id": "7.15",
+    "title": "XFA"
+   },
+   "category": "Forms",
+   "result": "not_applicable",
+   "evidence": "This document does not use XFA."
+  },
+  {
+   "id": "L1-7.16-1",
+   "reference": "ISO 14289-1 §7.16",
+   "name": "Encryption, when used, allows assistive technology to read the content.",
+   "level": "shall",
+   "section": {
+    "id": "7.16",
+    "title": "Security"
+   },
+   "category": "Document setup & metadata",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.17-1",
+   "reference": "ISO 14289-1 §7.17",
+   "name": "The document has an outline (bookmarks) that matches the reading order.",
+   "level": "should",
+   "section": {
+    "id": "7.17",
+    "title": "Navigation"
+   },
+   "category": "Headings & navigation",
+   "result": "not_applicable",
+   "evidence": "This is not something we add to a document."
+  },
+  {
+   "id": "L1-7.17-2",
+   "reference": "ISO 14289-1 §7.17",
+   "name": "Page labels make sense to the reader.",
+   "level": "should",
+   "section": {
+    "id": "7.17",
+    "title": "Navigation"
+   },
+   "category": "Headings & navigation",
+   "result": "not_applicable",
+   "evidence": "No content of this kind in this document."
+  },
+  {
+   "id": "L1-7.18.1-2",
+   "reference": "ISO 14289-1 §7.18.1",
+   "name": "Annotations are in correct reading order.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "We tag annotations, wire links to their text, and give each one an accessible description."
+  },
+  {
+   "id": "L1-7.18.1-3",
+   "reference": "ISO 14289-1 §7.18.1",
+   "name": "Annotations used for visual formatting are tagged by their purpose.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This document has no formatting annotations, image maps or media clips."
+  },
+  {
+   "id": "L1-7.18.1-4",
+   "reference": "ISO 14289-1 §7.18.1",
+   "name": "Every annotation has a Contents entry or an alternative description.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.18.2-1",
+   "reference": "ISO 14289-1 §7.18.2",
+   "name": "Annotations of other types meet the general annotation rules.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This is not something we add to a document."
+  },
+  {
+   "id": "L1-7.18.2-2",
+   "reference": "ISO 14289-1 §7.18.2",
+   "name": "The document contains no TrapNet annotations.",
+   "level": "shall not",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.18.3-1",
+   "reference": "ISO 14289-1 §7.18.3",
+   "name": "Tab order follows the tag tree on every page with annotations.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.18.4-1",
+   "reference": "ISO 14289-1 §7.18.4",
+   "name": "Widget annotations are nested in a <Form> tag.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.18.5-1",
+   "reference": "ISO 14289-1 §7.18.5",
+   "name": "Each link annotation is nested in a <Link> tag.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.18.5-2",
+   "reference": "ISO 14289-1 §7.18.5",
+   "name": "Every link annotation has an alternate description in Contents.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.18.5-3",
+   "reference": "ISO 14289-1 §7.18.5",
+   "name": "Image-map links offer the same function another way.",
+   "level": "shall not",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This document has no image maps."
+  },
+  {
+   "id": "L1-7.18.6.2-1",
+   "reference": "ISO 14289-1 §7.18.6.2",
+   "name": "Every media clip has a content type and an alternative description.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This document has no multimedia."
+  },
+  {
+   "id": "L1-7.18.7-1",
+   "reference": "ISO 14289-1 §7.18.7",
+   "name": "File attachment annotations meet the embedded-file rules.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This document has no file attachment annotations."
+  },
+  {
+   "id": "L1-7.18.8-1",
+   "reference": "ISO 14289-1 §7.18.8",
+   "name": "PrinterMark annotations stay out of the logical structure.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.18.8-2",
+   "reference": "ISO 14289-1 §7.18.8",
+   "name": "Printer's marks drawn as page content are marked as artifacts.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This is not something we add to a document."
+  },
+  {
+   "id": "L2-14.8.2.2-6",
+   "reference": "ISO 32000-1 §14.8.2.2.3",
+   "name": "A word split by a line-end hyphen uses a soft hyphen.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.2.2-7",
+   "reference": "ISO 32000-1 §14.8.2.2.3",
+   "name": "All text and illustrations count as page content even when they do not show.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "We tag every piece of real content and mark decorative content as an artifact, so a screen reader reads the content and skips the decoration."
+  },
+  {
+   "id": "L2-14.8.4.4-2",
+   "reference": "ISO 32000-1 §14.8.4.4.2",
+   "name": "A link element holds its content and its link annotations.",
+   "level": "may",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L2-14.8.4.4-3",
+   "reference": "ISO 32000-1 §14.8.4.4.2",
+   "name": "A link that wraps onto another line is one link annotation covering each part.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.8.4.4-4",
+   "reference": "ISO 32000-1 §14.8.4.4.3",
+   "name": "Annotations other than links and form fields use annotation elements.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This document has no annotations of the kinds this covers."
+  },
+  {
+   "id": "L2-14.8.4.4-5",
+   "reference": "ISO 32000-1 §14.8.4.4.3",
+   "name": "Several annotations under one element differ only in their position.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.9.3-1",
+   "reference": "ISO 32000-1 §14.9.3",
+   "name": "A form field's alternate name is in its TU entry.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L2-14.9.3-2",
+   "reference": "ISO 32000-1 §14.9.3",
+   "name": "Alternate descriptions use a standard text encoding.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L2-14.9.3-3",
+   "reference": "ISO 32000-1 §14.9.3",
+   "name": "An alternate description stands in for the whole element.",
+   "level": "shall",
+   "section": {
+    "id": "7.18",
+    "title": "Annotations"
+   },
+   "category": "Links & annotations",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.19-1",
+   "reference": "ISO 14289-1 §7.19",
+   "name": "A script that changes the page announces the change to assistive technology.",
+   "level": "should",
+   "section": {
+    "id": "7.19",
+    "title": "Actions"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "No content of this kind in this document."
+  },
+  {
+   "id": "L1-7.19-2",
+   "reference": "ISO 14289-1 §7.19",
+   "name": "No script requires specific keystroke timing.",
+   "level": "shall not",
+   "section": {
+    "id": "7.19",
+    "title": "Actions"
+   },
+   "category": "Links & annotations",
+   "result": "not_applicable",
+   "evidence": "This document has no scripts."
+  },
+  {
+   "id": "L1-7.20-1",
+   "reference": "ISO 14289-1 §7.20",
+   "name": "The document contains no reference XObjects.",
+   "level": "shall not",
+   "section": {
+    "id": "7.20",
+    "title": "XObjects"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.20-2",
+   "reference": "ISO 14289-1 §7.20",
+   "name": "Content drawn by forms is tagged as part of the structure.",
+   "level": "shall",
+   "section": {
+    "id": "7.20",
+    "title": "XObjects"
+   },
+   "category": "Reading order & structure",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.1-1",
+   "reference": "ISO 14289-1 §7.21.1",
+   "name": "The font rules apply to every font, including invisible text.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L1-7.21.2-1",
+   "reference": "ISO 14289-1 §7.21.2",
+   "name": "Every embedded font program reads as the font type it declares.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.2-2",
+   "reference": "ISO 14289-1 §7.21.2",
+   "name": "Multiple master fonts meet the Type 1 font rules.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "Built into how PDF Tagger tags documents; our tests check it."
+  },
+  {
+   "id": "L1-7.21.3.1-1",
+   "reference": "ISO 14289-1 §7.21.3.1",
+   "name": "A CID font and its CMap name the same character collection.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "We keep the document's fonts and their character mappings intact."
+  },
+  {
+   "id": "L1-7.21.3.2-1",
+   "reference": "ISO 14289-1 §7.21.3.2",
+   "name": "A Type 2 CID font's CIDToGIDMap is a stream or Identity.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.3.3-1",
+   "reference": "ISO 14289-1 §7.21.3.3",
+   "name": "Every CMap is a standard listed one or is embedded.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.3.3-2",
+   "reference": "ISO 14289-1 §7.21.3.3",
+   "name": "The CMap dictionary and stream declare the same WMode.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.3.3-3",
+   "reference": "ISO 14289-1 §7.21.3.3",
+   "name": "A CMap only references standard listed CMaps.",
+   "level": "shall not",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.4.1-1",
+   "reference": "ISO 14289-1 §7.21.4.1",
+   "name": "Fonts used for rendering are embedded.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": "This failed in the file you uploaded; the tagged file passes it."
+  },
+  {
+   "id": "L1-7.21.4.1-2",
+   "reference": "ISO 14289-1 §7.21.4.1",
+   "name": "Every embedded font is legally embeddable.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.4.1-3",
+   "reference": "ISO 14289-1 §7.21.4.1",
+   "name": "Every embedded font contains all the glyphs the text uses.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.4.2-1",
+   "reference": "ISO 14289-1 §7.21.4.2",
+   "name": "A Type 1 font's CharSet lists every glyph in the program.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "not_applicable",
+   "evidence": "No embedded Type 1 font with a CharSet."
+  },
+  {
+   "id": "L1-7.21.4.2-2",
+   "reference": "ISO 14289-1 §7.21.4.2",
+   "name": "A CID font's CIDSet lists every glyph in the program.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "not_applicable",
+   "evidence": "No embedded CID font with a CIDSet."
+  },
+  {
+   "id": "L1-7.21.5-1",
+   "reference": "ISO 14289-1 §7.21.5",
+   "name": "Glyph widths match between the font dictionary and the font program.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.6-1",
+   "reference": "ISO 14289-1 §7.21.6",
+   "name": "A non-symbolic TrueType font has a non-symbolic cmap.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.6-2",
+   "reference": "ISO 14289-1 §7.21.6",
+   "name": "A non-symbolic TrueType font uses MacRoman or WinAnsi encoding.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.6-3",
+   "reference": "ISO 14289-1 §7.21.6",
+   "name": "A non-symbolic TrueType font's Differences array uses only standard glyph names.",
+   "level": "shall not",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.6-4",
+   "reference": "ISO 14289-1 §7.21.6",
+   "name": "A symbolic TrueType font has no Encoding entry.",
+   "level": "shall not",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.6-5",
+   "reference": "ISO 14289-1 §7.21.6",
+   "name": "A symbolic TrueType font's cmap has one encoding or the Microsoft Symbol encoding.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.6-6",
+   "reference": "ISO 14289-1 §7.21.6",
+   "name": "Every rendered character code finds its glyph by the standard lookup.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.7-1",
+   "reference": "ISO 14289-1 §7.21.7",
+   "name": "Fonts map to Unicode through a ToUnicode CMap or an equivalent.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.7-2",
+   "reference": "ISO 14289-1 §7.21.7",
+   "name": "No ToUnicode value is zero, U+FEFF or U+FFFE.",
+   "level": "shall",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  },
+  {
+   "id": "L1-7.21.8-1",
+   "reference": "ISO 14289-1 §7.21.8",
+   "name": "No shown character maps to the .notdef glyph.",
+   "level": "shall not",
+   "section": {
+    "id": "7.21",
+    "title": "Fonts"
+   },
+   "category": "Text & language",
+   "result": "handled",
+   "evidence": null
+  }
+ ],
+ "report_pdf_url": "https://s3.example.com/report.pdf",
+ "expires_in": 3600,
+ "request_id": "req_test"
+}

@@ -6,6 +6,8 @@ Auto-tag PDFs for PDF/UA accessibility from your own code:
     >>> client = PdfTaggerClient(api_key="sk_live_...")
     >>> job = client.tag_pdf("report.pdf", ocr=True)
     >>> client.download_result(job, "report.tagged.pdf")
+    >>> report = client.get_job_report(job)  # the PDF/UA-1 report
+    >>> report.summary
 
 Many PDFs at once, as one batch:
 
@@ -30,7 +32,19 @@ from .exceptions import (
     RateLimitError,
     WebhookVerificationError,
 )
-from .models import Account, Batch, BatchCounts, BatchEvent, BatchItem, Job, JobResult, Upload, WebhookEvent
+from .models import (
+    Account,
+    Batch,
+    BatchCounts,
+    BatchEvent,
+    BatchItem,
+    Job,
+    JobReport,
+    JobResult,
+    Requirement,
+    Upload,
+    WebhookEvent,
+)
 from .webhooks import SIGNATURE_HEADER, verify_signature
 
 __all__ = [
@@ -42,6 +56,8 @@ __all__ = [
     "Upload",
     "Job",
     "JobResult",
+    "JobReport",
+    "Requirement",
     "Batch",
     "BatchItem",
     "BatchCounts",

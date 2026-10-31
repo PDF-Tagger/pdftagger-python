@@ -13,3 +13,17 @@ One-time setup (already done once it has been published):
   repository `pdftagger-python`, workflow `publish.yml`, environment `pypi`. Before the first
   release this is a "pending publisher" (Account settings → Publishing).
 - On GitHub, create the environment `pypi` (Settings → Environments).
+
+## The PyPI provenance banner
+
+PyPI compares each release with the latest earlier release that has attestations and was made within 14 days. It
+shows a "Change of provenance" warning when the publishing repository or workflow changed. 0.1.1 has that warning
+because 0.1.0 came from `rachel-ackeret/pdftagger-python` and 0.1.1 from `PDF-Tagger/pdftagger-python`. Every later
+release from this repository and `publish.yml` has no warning, so the project page is clean from 0.2.0 on. Keep the
+repository and the workflow file name the same; a change brings the warning back for one release. Do not delete
+0.1.0 to clear 0.1.1's own page: deletion is permanent and burns the version number.
+
+## Releases that need an API change
+
+Publish a release only after every API endpoint it calls is live on api.pdf-tagger.com. 0.2.0 calls
+`GET /v1/jobs/{id}/report`.

@@ -20,7 +20,7 @@ from .exceptions import (
     NotFoundError,
     RateLimitError,
 )
-from .models import Account, Batch, BatchItem, BatchItemInput, Job, JobResult, Upload
+from .models import Account, Batch, BatchItem, BatchItemInput, Job, JobReport, JobResult, Upload
 
 DEFAULT_BASE_URL = "https://api.pdf-tagger.com"
 
@@ -236,6 +236,14 @@ class PdfTaggerClient:
         """Get a short-lived download URL for a completed job."""
         return JobResult.from_dict(self._request("GET", f"/v1/jobs/{_job_id(job)}/result"))
 
+    def get_job_report(self, job: Union[str, Job]) -> JobReport:
+        """Get a completed job's PDF/UA-1 report: the result for every accessibility requirement.
+
+        Raises :class:`ConflictError` while the job is not completed, and :class:`NotFoundError`
+        when the job has no PDF/UA-1 report.
+        """
+        return JobReport.from_dict(self._request("GET", f"/v1/jobs/{_job_id(job)}/report"))
+
     def submit_batch(
         self,
         items: Sequence[BatchItemInput],
@@ -440,9 +448,26 @@ class PdfTaggerClient:
         Returns the written :class:`~pathlib.Path` when ``dest`` is given, otherwise the
         PDF bytes.
         """
-        result = self.get_job_result(job)
+        return self._download(self.get_job_result(job).result_url, dest)
+
+    def download_report(
+        self,
+        job: Union[str, Job],
+        dest: Optional[Union[str, Path]] = None,
+    ) -> Union[bytes, Path]:
+        """Download a completed job's PDF/UA-1 report PDF.
+
+        Returns the written :class:`~pathlib.Path` when ``dest`` is given, otherwise the
+        PDF bytes. Raises :class:`NotFoundError` when the report PDF is no longer stored.
+        """
+        report = self.get_job_report(job)
+        if not report.report_pdf_url:
+            raise NotFoundError("The report PDF for this job is no longer stored.", status_code=404)
+        return self._download(report.report_pdf_url, dest)
+
+    def _download(self, url: str, dest: Optional[Union[str, Path]]) -> Union[bytes, Path]:
         try:
-            response = self._http.get(result.result_url)
+            response = self._http.get(url)
         except httpx.HTTPError as exc:
             raise APIError(f"Download failed: {exc}") from exc
         if not response.is_success:
